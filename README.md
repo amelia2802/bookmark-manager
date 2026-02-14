@@ -12,7 +12,7 @@ Preview:
 - Google Cloud Console for OAuth setup
 
 ## Learning Outcomes
-1. Setting up the project skeleton us With Next.js was an interesting find as I mostly woked with create-react-app before and the nextjs but with page router. I had to learn about the new file based routing and how to structure the app with the App Router. It was a bit of a learning curve but I enjoyed it.
+1. Setting up the project skeleton us With Next.js was an interesting find as I mostly worked with `create-react-app` before and recently deployed one project with nextjs but with page router. I had to learn about the new file based routing and how to structure the app with the App Router. It was a bit of a learning curve but I enjoyed it.
 2. As mostly worked with frontend connecting with serverside setup and implementing the handshake between the backend(docker, supabase) was completly new to me. I take help with Gemini and prompted to give me instructions as trainer and I followed the instructions to set up the local development environment with Supabase. I learned how to start and stop the Supabase services, how to check the logs, and how to troubleshoot common issues that can arise when working with Docker and Supabase. 
 3. Face container conflict on supabase runtime as reported "already running" while DB container was exited. Ran `npx supabase stop --no-backup` then `npx supabase start`. Supabase state cleared and services restarted successfully.
 4. Got Docker error — container name conflict. Removed the stuck containers with `docker rm -f <container>` and retried `npx supabase start`. Name conflicts resolved and Supabase recreated containers normally.
