@@ -1,8 +1,10 @@
 # Bookmark Manager
 A simple bookmark manager app built with Next.js, Supabase, and Tailwind CSS. Users can sign up and log in using Google OAuth, add bookmarks, and see their bookmarks update in real-time across multiple tabs.
 
-Link: https://bookmark-manager-1j8l.vercel.app/
-Preview:
+**Link:** https://bookmark-manager-1j8l.vercel.app/
+
+**Preview:**<img width="1897" height="855" alt="Screenshot 2026-02-14 161138" src="https://github.com/user-attachments/assets/29b6607f-a560-494d-af1d-868710f11c06" />
+
 
 ## Tech Stacks
 - Next.js (App Router)
