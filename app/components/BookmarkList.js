@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { createBrowserClient } from "@supabase/ssr";
 
+export const dynamic = 'force-dynamic';
+
 export default function BookmarkList(){
     const [bookmarks, setBookmarks] = useState([]);
 
@@ -32,7 +34,13 @@ export default function BookmarkList(){
                     table: "bookmarks",
                 },
                 (payload) => {
-                    fetchBookmarks();
+                    if (payload.eventType === 'INSERT') {
+                        setBookmarks((prev) => [payload.new, ...prev]);
+                    } else if (payload.eventType === 'DELETE') {
+                        setBookmarks((prev) => prev.filter((b) => b.id !== payload.old.id));
+                    } else {
+                        fetchBookmarks(); 
+                    }
                 }
             ).subscribe();
 
@@ -47,7 +55,7 @@ export default function BookmarkList(){
             .delete()
             .eq('id', id);
 
-            if(!error){
+            if(error){
                 alert(error.message);
             }
         }
