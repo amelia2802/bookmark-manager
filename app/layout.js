@@ -1,3 +1,5 @@
+import LoginPage from "./components/LoginPage";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,10 +25,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="flex justify-between p-4 bg-[#168695] text-white items-center">
-          <h1 className="font-bold tracking-wider text-xl italic">ABM</h1>
+          <h1 className="font-bold tracking-wide text-xl italic"><Link href="/">Abstrabit Bookmark Manager</Link></h1>
         <nav>
           <ul>
-            <li> <a className="bg-emerald-500 hover:bg-emerald-700 text-white text-l font-bold py-2 px-4 rounded" href="#">Login</a></li>
+            <li> <LoginPage className="bg-emerald-500 hover:bg-emerald-700 text-white text-l font-bold py-2 px-4 rounded" href="#">Login</LoginPage></li>
           </ul>
         </nav>
         </header>
