@@ -29,5 +29,9 @@ A simple bookmark manager app built with Next.js, Supabase, and Tailwind CSS. Us
 
 9. Initializing Google OAuth was a new process, leading to **"400: Invalid Request"** errors when trying to sign in through the local environment.Configured the OAuth Consent Screen and created a Web Client ID in Google Cloud Console, specifically whitelisting the local Supabase callback URL. Successfully enabled a secure Google Login flow that automatically creates and authenticates users in the Supabase Auth table.
 
-10. Transitioning from local development to production caused the OAuth flow to break because the Google API services didn't recognize the Vercel domain.Updated the Google Cloud "Authorized JavaScript Origins" and "Redirect URIs" to include the live Vercel URL alongside the Supabase project URL.Established a robust production-ready authentication system that allows seamless login across both development and live environment
+10. Transitioning from local development to production caused the OAuth flow to break because the Google API services didn't recognize the Vercel domain.Updated the Google Cloud "Authorized JavaScript Origins" and "Redirect URIs" to include the live Vercel URL alongside the Supabase project URL.Established a robust production-ready authentication system that allows seamless login across both development and live environment.
+
+
+### Current Status Update
+The real-time bookmark update feature(Task 4) is currently in beta. While the data persists correctly in the database, the UI triggers for cross-tab synchronization may require a manual refresh in some edge cases. I am currently investigating a more robust implementation to optimize this. 
 
